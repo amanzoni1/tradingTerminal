@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import './tabs.css';
-import Positions from '../Positions/positions';
-import Orders from '../Orders/orders';
-import Bags from '../Bags/bags';
-import usePositions from '../../hooks/usePositions';
-import useOpenOrders from '../../hooks/useOpenOrders';
+import Positions from '../Positions/positions1';
+import Orders from '../Orders/orders1';
+import Bags from '../Bags/bags1';
+// import usePositions from '../../hooks/usePositions';
+// import useOpenOrders from '../../hooks/useOpenOrders';
 import useBags from '../../hooks/useBags';
 
 
@@ -16,9 +16,9 @@ const tabNames = {
 
 const Tabs = () => {
   const [tabName, setTabName] = useState('Positions');
-  const { data: positions } = usePositions();
-  const { data: orders } = useOpenOrders();
-  const { data: bags } = useBags();
+  // const { data: positions } = usePositions();
+  // const { data: orders } = useOpenOrders();
+  // const { data: bags } = useBags();
 
   const handleTabChange = (event) => setTabName(event.target.value);
 
@@ -30,21 +30,21 @@ const Tabs = () => {
           value={tabNames.Positions}
           onClick={handleTabChange}
         >
-          Positions ({positions?.length})
+          Positions (0)
         </button>
         <button
           className={`tab-button ${tabName === tabNames.Bags ? 'active1' : ''}`}
           value={tabNames.Bags}
           onClick={handleTabChange}
         >
-          Bags ({bags?.length})
+          Bags (0)
         </button>
         <button
           className={`tab-button ${tabName === tabNames.Orders ? 'active1' : ''}`}
           value={tabNames.Orders}
           onClick={handleTabChange}
         >
-          Orders ({orders?.length})
+          Orders (0)
         </button>
       </div>
       <div className="content">

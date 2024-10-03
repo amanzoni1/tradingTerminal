@@ -17,10 +17,10 @@
   visibility: hidden;
   min-width: 250px;
   margin-left: -125px;
-  background-color: #f6465d;
-  color: #fff;
+  background-color: #8bf0f8;
+  font-weight: bold;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 6px;
   padding: 16px;
   position: fixed;
   z-index: 1;

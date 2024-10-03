@@ -1,19 +1,25 @@
 import React, { useEffect } from 'react';
-import useAccountInfo from '../../hooks/useAccountInfo';
+//import useAccountInfo from '../../hooks/useAccountInfo';
 import './accountInfo.css';
 
 const AccountInfo = () => {
-  const { marginBalance, spotBalance, pnl, refetchSpot, refetchFuture } = useAccountInfo();
-  const total = Number(marginBalance) + Number(pnl) + Number(spotBalance);
+  // const { marginBalance, spotBalance, pnl, refetchSpot, refetchFuture } = useAccountInfo();
+  // const total = Number(marginBalance) + Number(pnl) + Number(spotBalance);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      refetchSpot();
-      refetchFuture();
-    }, 1000); 
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     refetchSpot();
+  //     refetchFuture();
+  //   }, 1000); 
 
-    return () => clearInterval(intervalId);
-  }, [refetchSpot, refetchFuture]); 
+  //   return () => clearInterval(intervalId);
+  // }, [refetchSpot, refetchFuture]); 
+
+  //Just to show
+  const spotBalance = 0;
+  const marginBalance = 0;
+  const pnl = 0;
+  const total = 0;
 
   return (
     <div className="box-info">
@@ -32,7 +38,7 @@ const AccountInfo = () => {
             {Number(marginBalance).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
           </p>
           <div>
-            {pnl > 0 ? (
+            {pnl >= 0 ? (
               <p className='acc-pc-green'>
                 {Number(pnl).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
               </p>

@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { createChart } from 'lightweight-charts';
 import useChartHistory from '../../hooks/useChartHystory';
 import useChartUpdates from '../../hooks/useChartUpdates';
-import useChartPositions from '../../hooks/useChartPositions';
-import useChartOrders from '../../hooks/useChartOrders';
-import Switcher from '../Switcher/Switcher';
+//import useChartPositions from '../../hooks/useChartPositions';
+//import useChartOrders from '../../hooks/useChartOrders';
+import Switcher from '../Switcher/switcher'
 import FearAndGreedIndex from '../FearAndGreedIndex/FearAndGreedIndex';
 import './chart.css';
 
@@ -13,12 +13,12 @@ const ChartComponent = ({ selectedSymbol }) => {
   const chartRef = useRef(null);
   const candlestickSeriesRef = useRef(null);
   const volumeSeriesRef = useRef(null);
-  const priceLinesRef = useRef({ positionLine: null, orderLines: [] });
+  //const priceLinesRef = useRef({ positionLine: null, orderLines: [] });
   const [interval, setInterval] = useState('1m');
   const { chartData } = useChartHistory(selectedSymbol, interval);
   const { candle, volume } = useChartUpdates(selectedSymbol, interval);
-  const { positionLine } = useChartPositions(selectedSymbol);
-  const orderLines = useChartOrders(selectedSymbol);
+  //const { positionLine } = useChartPositions(selectedSymbol);
+  //const orderLines = useChartOrders(selectedSymbol);
 
   const newChartDataCandle = useCallback(() => {
     return chartData.map((cart) => ({
@@ -174,36 +174,36 @@ const ChartComponent = ({ selectedSymbol }) => {
     }
   }, [candle, volume]);
 
-  // Update price lines
-  useEffect(() => {
-    if (candlestickSeriesRef.current) {
-      // Remove existing position line
-      if (priceLinesRef.current.positionLine) {
-        candlestickSeriesRef.current.removePriceLine(priceLinesRef.current.positionLine);
-      }
+  //Update price lines
+  // useEffect(() => {
+  //   if (candlestickSeriesRef.current) {
+  //     // Remove existing position line
+  //     if (priceLinesRef.current.positionLine) {
+  //       candlestickSeriesRef.current.removePriceLine(priceLinesRef.current.positionLine);
+  //     }
   
-      // Add new position line
-      if (positionLine) {
-        const newPositionLine = candlestickSeriesRef.current.createPriceLine(positionLine);
-        priceLinesRef.current.positionLine = newPositionLine;
-      } else {
-        priceLinesRef.current.positionLine = null;
-      }
+  //     // Add new position line
+  //     if (positionLine) {
+  //       const newPositionLine = candlestickSeriesRef.current.createPriceLine(positionLine);
+  //       priceLinesRef.current.positionLine = newPositionLine;
+  //     } else {
+  //       priceLinesRef.current.positionLine = null;
+  //     }
   
-      // Remove existing order lines
-      if (priceLinesRef.current.orderLines.length > 0) {
-        priceLinesRef.current.orderLines.forEach((line) =>
-          candlestickSeriesRef.current.removePriceLine(line)
-        );
-      }
+  //     // Remove existing order lines
+  //     if (priceLinesRef.current.orderLines.length > 0) {
+  //       priceLinesRef.current.orderLines.forEach((line) =>
+  //         candlestickSeriesRef.current.removePriceLine(line)
+  //       );
+  //     }
   
-      // Add new order lines
-      const newOrderLines = orderLines.map((orderLine) =>
-        candlestickSeriesRef.current.createPriceLine(orderLine)
-      );
-      priceLinesRef.current.orderLines = newOrderLines;
-    }
-  }, [positionLine, orderLines, candlestickSeriesRef.current]);
+  //     // Add new order lines
+  //     const newOrderLines = orderLines.map((orderLine) =>
+  //       candlestickSeriesRef.current.createPriceLine(orderLine)
+  //     );
+  //     priceLinesRef.current.orderLines = newOrderLines;
+  //   }
+  // }, [positionLine, orderLines, candlestickSeriesRef.current]);
 
   return (
     <div className="main-graph-component">
