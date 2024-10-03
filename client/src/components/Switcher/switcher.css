@@ -1,0 +1,48 @@
+.switcher {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  cursor: pointer;
+  height: auto;
+  width: max-content;
+  margin-top: 12px;
+  margin-left: 14px;
+  padding: 2px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.switcher-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2px 2px;
+}
+
+.switcher-item {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  padding: 6px 6px;
+  text-align: center;
+}
+
+.switcher-item:hover {
+  color: #29f1ff;
+}
+
+.active {
+  color: #29f1ff;
+}
+
+.legend {
+  position: absolute;
+  margin-top: 88px;
+  margin-left: 42px;
+  font-size: 26px;
+  font-weight: bold;
+  z-index: 1000;
+}

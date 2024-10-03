@@ -1,0 +1,57 @@
+.box-info {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(56, 56, 56);
+  border-radius: 6px;
+  margin: 0px 2px 4px 6px;
+  color: white;
+}
+
+.p-acc,
+.acc-pc-green,
+.acc-pc-red,
+.acc-fr {
+  font-size: 12px;
+  max-width: 100%;
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.p-accT {
+  font-size: 14px;
+}
+
+.acc-info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+}
+
+.acc-info-title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px 0px 0px 10px;
+  color: rgb(207, 207, 207);
+}
+
+.acc-info-value {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0px 16px 0px 0px;
+}
+
+.acc-pc-green {
+  color: rgb(14, 203, 129);
+}
+
+.acc-pc-red {
+  color: rgb(246, 70, 93);
+}

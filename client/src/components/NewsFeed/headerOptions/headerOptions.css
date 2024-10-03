@@ -1,0 +1,48 @@
+.header-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(104, 104, 104);
+  color: rgb(188, 188, 188);
+  position: sticky;
+  top: 0;
+  background:  rgb(24, 24, 24);
+  z-index: 1000;
+  padding: 12px 0px 12px 0px;
+}
+
+
+.search-bar-container {
+  margin-left: 48px;
+}
+
+.search-input {
+  width: 250px;
+  padding: 4px;
+  font-size: 12px; 
+  background-color: lightgray;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.enable-audio-button {
+  margin-right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.enable-audio-button img {
+  width: 20px;
+  height: auto;
+}
+
+.enable-audio-button:hover {
+  opacity: 0.8;
+}
+
+.enable-audio-button:active {
+  opacity: 0.3;
+}

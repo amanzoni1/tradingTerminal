@@ -1,0 +1,269 @@
+.App {
+  font-family: 'Share Tech Mono', monospace;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Share Tech Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center; 
+  /*background: linear-gradient(to left, rgb(17, 17, 17) 0%, rgb(28, 28, 28) 100%);*/
+  background: rgb(24, 24, 24);
+}
+
+p {
+  margin: 0px;
+}
+
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #1e1d1d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8bf0f8;
+  border-radius: 4px;
+}
+
+.mainview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.optionside {
+  width: 350px;
+  margin: 0px 6px 0px 2px;
+}
+
+.newsfeed {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  overflow-y: auto;
+  width: 420px;
+  height: 724px;
+  border: 1px solid rgb(56, 56, 56);
+  border-radius: 6px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-right: 2px;
+  margin-left: 6px;
+  margin-top: 2px;
+}
+
+.options-tab {
+  border: 1px;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: rgb(56, 56, 56);
+  margin: 0px 2px 0px 6px;
+}
+
+.graphside {
+  flex: 1;
+  height: 510px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  border: 1px;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: rgb(56, 56, 56);
+  margin: 0px 2px 0px 2px;
+}
+
+.contenitore {
+  display: grid;
+  row-gap: 10px;
+  column-gap: 6px;
+  margin: 4px;
+  grid-template-areas: 'amount amount order order';
+}
+
+.contenitore-top {
+  display: grid;
+  grid-template-columns: 3.5fr 1fr;
+  row-gap: 10px;
+  column-gap: 6px;
+  margin: 4px;
+}
+
+
+.amount {
+  justify-content: space-between;
+  grid-area: amount;
+}
+
+.order {
+  justify-content: space-between;
+  grid-area: order;
+}
+
+.blocco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: rgb(56, 56, 56);
+}
+
+.blocco-trading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selection {
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  border: 1px;
+  border-style: solid;
+  border-color: rgb(104, 104, 104);
+  width: 82%;
+  border-radius: 6px;
+  margin-top: 8px;
+  padding: 6px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 4px #29f1ff;
+}
+
+.selection1 {
+  font-family: 'Share Tech Mono', monospace;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  color: #8bf0f8;
+  height: 34px;
+  font-size: 14px;
+  border: 1px;
+  border-style: solid;
+  border-color: #808080;
+  width: 72%;
+  border-radius: 6px;
+  margin-top: 8px;
+  padding: 4px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* caselle opzioni */
+.option-type {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.option-amount {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.button-opt {
+  font-family: 'Share Tech Mono', monospace;
+  background-color: transparent;
+  color: rgb(188, 188, 188);
+  font-size: 10px;
+  padding: 2px 8px;
+  margin: 2px;
+  cursor: pointer;
+  border: 1px;
+  border-style: solid;
+  border-color: rgb(104, 104, 104);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.button-opt:hover {
+  color: #8bf0f8;
+}
+
+.button-opt:active {
+  opacity: 0.3;
+}
+
+/* bottoni long short */
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  height: 82px;
+}
+
+.long {
+  font-family: 'Share Tech Mono', monospace;
+  background-color: rgb(14, 203, 129);
+  cursor: pointer;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-style: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  transition: opacity 0.15s;
+}
+
+.short {
+  font-family: 'Share Tech Mono', monospace;
+  background-color: rgb(246, 70, 93);
+  cursor: pointer;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-style: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  transition: opacity 0.15s;
+}
+
+.short:hover,
+.long:hover {
+  opacity: 0.8;
+}
+
+.short:active,
+.long:active {
+  opacity: 0.3;
+}
+
+.refetch-button {
+  float: right;
+  padding: 2px;
+  cursor: pointer;
+  align-items: flex-end;
+  font-size: 12px;
+  color: white;
+  border-radius: 6px;
+  background-color: #1e1d1d;
+  border: 1px solid rgb(104, 104, 104);
+  margin: 15px 46px 6px 0px;
+}
+
+.second-line-big-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 930px;
+  margin-top: 8px;
+}

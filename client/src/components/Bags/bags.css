@@ -1,0 +1,105 @@
+.tableWrapper {
+  overflow-y: scroll;
+  height: 126px;
+  margin: 4px;
+}
+
+.tableWrapper::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: #29f1ff;
+  border-radius: 6px;
+}
+
+.dir-button {
+  cursor: pointer;
+}
+
+.pos-table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.bags-legend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 12px;
+  border-radius: 6px;
+  color: rgb(170, 170, 170);
+  padding-bottom: 8px;
+  border-radius: 0px;
+}
+
+.container-bags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(56, 56, 56);
+  padding-bottom: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.bags-value {
+  color: rgb(14, 203, 129);
+}
+
+.close-button {
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 4px 12px;
+  border-style: solid;
+  border-radius: 6px;
+  border-color: rgb(56, 56, 56);
+  transition: opacity 0.15s;
+  justify-self: center;
+}
+
+.close-button:hover {
+  color: #8bf0f8;
+}
+
+.close-button:active {
+  opacity: 0.3;
+}
+
+.reduce-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.reduce-button {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 10px;
+  transition: opacity 0.15s;
+  border-radius: 6px;
+  border-color: rgb(56, 56, 56);
+  border-style: solid;
+}
+
+.reduce-button:hover {
+  color: #8bf0f8;
+}
+
+.reduce-button:active {
+  opacity: 0.3;
+}
+
+.p-pos {
+  color: rgb(207, 207, 207);
+}

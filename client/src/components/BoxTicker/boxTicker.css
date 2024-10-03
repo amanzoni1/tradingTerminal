@@ -1,0 +1,105 @@
+.box-ticker {
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  border-top: 1px solid rgb(56, 56, 56);
+  border-radius: 6px;
+  color: white;
+}
+
+.p-bt,
+.bt-pc-green,
+.bt-pc-red,
+.bt-fr {
+  font-size: 12px;
+  max-width: 100%;
+  margin-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bt-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: left;
+  border-bottom: 1px solid rgb(56, 56, 56);
+  padding: 2px;
+  margin-top: 2px;
+}
+
+.bt-info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4px;
+}
+
+.bt-info-title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px 0px 0px 4px;
+  margin-top: 6px;
+  color: rgb(207, 207, 207);
+}
+
+.bt-info-title-spot {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 4px;
+  margin-top: 20px;
+  color: rgb(207, 207, 207);
+}
+
+.bt-info-value {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0px 4px 0px 0px;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+.bt-info-value-spot {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-right: 4px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.bt-coin {
+  font-size: 16px;
+  margin-left: 14px;
+  font-weight: bold;
+  color: #8bf0f8;
+}
+
+.bt-mark {
+  color: rgb(207, 207, 207);
+  margin-left: 8px;
+  margin-top: 6px;
+}
+
+.bt-fr {
+  color: rgb(183, 156, 47);
+}
+
+.bt-pc-green {
+  color: rgb(14, 203, 129);
+}
+
+.bt-pc-red {
+  color: rgb(246, 70, 93);
+}

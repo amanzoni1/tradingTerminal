@@ -1,0 +1,24 @@
+.fear-and-greed-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: 86px;
+  height: auto;
+  width: max-content;
+  padding: 2px;
+  z-index: 1000;
+  font-size: 16px;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 6px;
+}

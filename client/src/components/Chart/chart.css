@@ -1,0 +1,12 @@
+.main-graph-component {
+  position: relative;
+  color: white;
+  min-width: 280px;
+  width: 98%;
+  height: 510px;
+  border-color: rgb(56, 56, 56);
+  margin-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+

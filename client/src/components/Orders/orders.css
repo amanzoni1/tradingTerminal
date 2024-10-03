@@ -1,0 +1,82 @@
+.tableWrapper {
+  overflow-y: scroll;
+  margin: 4px;
+}
+
+.tableWrapper::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: #29f1ff;
+  border-radius: 6px;
+}
+
+.dir-button {
+  cursor: pointer;
+}
+
+.pos-table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.ordini {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 6px;
+  font-size: 14px;
+  color: rgb(170, 170, 170);
+  padding-bottom: 8px;
+  border-radius: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(56, 56, 56);
+  padding-bottom: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.green-str {
+  color: rgb(14, 203, 129);
+}
+
+.red-str {
+  color: rgb(246, 70, 93);
+}
+
+.close-button {
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px 12px;
+  border-style: solid;
+  border-radius: 6px;
+  border-color: rgb(56, 56, 56);
+  font-size: 10px;
+  transition: opacity 0.15s;
+  justify-self: center;
+}
+
+.close-button:hover {
+  color: #8bf0f8;
+}
+
+.close-button:active {
+  opacity: 0.3;
+}
+
+.p-pos {
+  color: rgb(207, 207, 207);
+}

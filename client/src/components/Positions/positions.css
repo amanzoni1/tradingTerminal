@@ -1,0 +1,147 @@
+.tableWrapper {
+  overflow-y: scroll;
+  height: 140px;
+  margin: 4px;
+}
+
+.tableWrapper::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: #8bf0f8;
+  border-radius: 6px;
+}
+
+.dir-button {
+  cursor: pointer;
+}
+
+tr.ordini th {
+  font-size: 12px;
+}
+
+
+.pos-table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.ordini {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  overflow: hidden;
+  font-size: 8px;
+  border-radius: 6px;
+  color: rgb(170, 170, 170);
+  padding-bottom: 8px;
+  border-radius: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  border-bottom: 1px solid rgb(56, 56, 56);
+  padding-bottom: 2px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.container:hover {
+  background-color: rgba(41, 241, 255, 0.1);
+}
+
+.green-circle {
+  margin-right: 6px;
+  width: 5px;
+  height: 22px;
+  background-color: rgb(14, 203, 129);
+}
+
+.red-circle {
+  margin-right: 6px;
+  width: 5px;
+  height: 22px;
+  background-color: rgb(246, 70, 93);
+}
+
+.green-text {
+  color: rgb(14, 203, 129);
+}
+
+.red-text {
+  color: rgb(246, 70, 93);
+}
+
+.leverage {
+  color: rgb(183, 156, 47);
+  font-size: 12px;
+}
+.liqui {
+  color: rgb(183, 156, 47);
+  font-size: 12px;
+}
+.pnl-green {
+  color: rgb(14, 203, 129);
+}
+
+.pnl-red {
+  color: rgb(246, 70, 93);
+}
+
+.close-button {
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px 12px;
+  border-style: solid;
+  border-radius: 6px;
+  border-color: rgb(56, 56, 56);
+  font-size: 10px;
+  transition: opacity 0.15s;
+  justify-self: center;
+  margin-left: 4px;
+}
+
+.close-button:hover {
+  color: #8bf0f8;
+}
+
+.close-button:active {
+  opacity: 0.3;
+}
+
+.reduce-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.reduce-button {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 9px;
+  transition: opacity 0.15s;
+  border-radius: 6px;
+  border-color: rgb(56, 56, 56);
+  border-style: solid;
+}
+
+.reduce-button:hover {
+  color: #8bf0f8;
+}
+
+.reduce-button:active {
+  opacity: 0.3;
+}
+
+.p-pos {
+  color: rgb(207, 207, 207);
+}

@@ -1,0 +1,105 @@
+.blocco-symbols {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.selection-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.selectionSy {
+  background-color: transparent;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  border: 1px;
+  border-style: solid;
+  border-color: rgb(104, 104, 104);
+  width: 80%;
+  border-radius: 6px;
+  margin-top: 8px;
+  margin-left: 28px;
+  padding: 16px;
+  margin-bottom: 18px;
+  box-shadow: 1px 1px 4px #29f1ff;
+  width: 66%;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bin-link,
+.btc-link {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  margin-left: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bin-link {
+  margin-bottom: 2px;
+}
+
+.btc-link {
+  margin-top: 2px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.bin-link img,
+.btc-link img {
+  border-radius: 6px;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.basic {
+  display: flex;
+  width: 100%;
+}
+
+.basic-single {
+  font-size: 16px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 4px 20px 4px;
+}
+
+.input-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.label-sy {
+  color: rgb(188, 188, 188);
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.input-amount {
+  font-family: 'Share Tech Mono', monospace;
+  width: 72px;
+  border-radius: 4px;
+  margin: 0px 4px 8px 0px;
+  border: 1px solid rgb(104, 104, 104);
+  box-sizing: border-box;
+  text-align: right;
+  padding: 2px;
+}
+
+
+
