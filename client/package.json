@@ -18,9 +18,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider BUILD_PATH=../server/public react-scripts build",
-    "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
