@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-import SnackbarContext from '../contects/SnackbarContext';
+import SnackbarContext from '../context/SnackbarContext';
 
 const SnackbarProvider = (props) => {
   const [message, setMessage] = useState('');

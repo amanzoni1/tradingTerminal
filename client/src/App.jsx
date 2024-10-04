@@ -8,7 +8,7 @@ import Amount from './components/Amount';
 import Tabs from './components/Tabs/tabs';
 import CreateOrder from './components/CreateOrder';
 import TradingPair from './components/TradingPair/TradingPair';
-import ChartComponent from './components/Chart/chart'
+import ChartComponent from './components/Chart/chart';
 import AccountInfo from './components/AccountInfo/accountInfo';
 import NewsFeed from './components/NewsFeed/newsFeed';
 
@@ -24,7 +24,7 @@ const App = () => {
   return (
     <SWRConfig value={config.swr}>
       <div className="App">
-        <div>
+        <div className='left-block'>
           <div className='mainview'>
             <div className='optionside'>
               <AccountInfo />
@@ -37,8 +37,7 @@ const App = () => {
                   <Amount amount={amount} onChange={setAmount} />
                   <OrderType type={orderType} onChange={setOrderType} />
                 </div>
-                <CreateOrder selectedSymbol={selectedSymbol} orderType={orderType} amount={amount} limitPrice={limitPrice} stopPrice={stopPrice} />
-                
+                <CreateOrder selectedSymbol={selectedSymbol} orderType={orderType} amount={amount} limitPrice={limitPrice} stopPrice={stopPrice} />  
               </div>
             </div>
             <div className='graphside'>

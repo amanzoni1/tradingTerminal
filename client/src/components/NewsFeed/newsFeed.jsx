@@ -9,9 +9,7 @@ import CoinPriceVariation from './CoinPriceVariation/coinPriceVariation';
 import HeaderOptions from './headerOptions/headerOptions';
 import { defaultImages, sourceSounds, manualAdditions, manualRemovals } from './params';
 import './newsFeed.css';
-
 import useSnackbar from '../../hooks/useSnackbar';
-
 
 const specialSymbols = ['PEPE', 'FLOKI', 'BONK', 'SATS', 'RATS', 'SHIB', 'XEC'];
 
@@ -62,7 +60,6 @@ const NewsFeed = () => {
   const [searchKeyword, setSearchKeyword] = useState('');
   const [symbolSet, setSymbolSet] = useState(new Set());
   const notificationSound = useRef(new Audio(sourceSounds.default));
-
   const { openSnackbar, openErrorSnackbar } = useSnackbar();
 
   useEffect(() => {
@@ -130,37 +127,42 @@ const NewsFeed = () => {
     openErrorSnackbar("Short order is not available without inserting an API key");
   };
 
-
   // Handle duplicates in feed
   useEffect(() => {
     const allMessages = [...terminalMessages, ...bweMessages, ...phoenixMessages];
     const uniqueMessages = filterDuplicates(allMessages);
-
+  
     uniqueMessages.sort((a, b) => new Date(b.time) - new Date(a.time));
-
+  
     // Limit the messages to the latest 100
     const limitedMessages = uniqueMessages.slice(0, 100);
-
+  
+    // Check if mergedMessages actually changed before updating state
     setMergedMessages((prevMergedMessages) => {
-      // Compute new messages
-      const prevMessageIds = new Set(prevMergedMessages.map((msg) => msg._id));
-      const newMessages = limitedMessages.filter((msg) => !prevMessageIds.has(msg._id));
-
+      const prevIds = new Set(prevMergedMessages.map((msg) => msg._id));
+      const newIds = new Set(limitedMessages.map((msg) => msg._id));
+  
+      // If the message IDs are the same, no need to update state
+      if (prevIds.size === newIds.size && [...prevIds].every((id) => newIds.has(id))) {
+        return prevMergedMessages;
+      }
+  
       // Process new messages for sound notifications
+      const newMessages = limitedMessages.filter((msg) => !prevIds.has(msg._id));
+  
       newMessages.forEach((message) => {
         if (message.source) {
           const sourceSound =
             normalizedSourceSounds[message.source.toLowerCase()] || sourceSounds.default;
-          notificationSound.current.src = sourceSound;
           if (audioEnabled) {
             notificationSound.current.play().catch((err) => console.error('Audio play failed:', err));
           }
         }
       });
-
+  
       return limitedMessages;
     });
-  }, [terminalMessages, bweMessages, phoenixMessages, audioEnabled]);
+  }, [terminalMessages, bweMessages, phoenixMessages]);
 
   const normalizedSourceSounds = useMemo(() => {
     return Object.keys(sourceSounds).reduce((acc, key) => {

@@ -16,10 +16,10 @@ const AccountInfo = () => {
   // }, [refetchSpot, refetchFuture]); 
 
   //Just to show
-  const spotBalance = 0;
-  const marginBalance = 0;
+  const spotBalance = 1000;
+  const marginBalance = 2345;
   const pnl = 0;
-  const total = 0;
+  const total = spotBalance + marginBalance + pnl;
 
   return (
     <div className="box-info">
