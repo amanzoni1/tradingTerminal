@@ -4,7 +4,7 @@ import useSymbols from '../../hooks/useSymbols';
 import useFutureSymbols from '../../hooks/useFutureSymbols';
 import useNewsTerminal from '../../hooks/useNewsTerminal';
 import useNewsPhoneix from '../../hooks/useNewsPhoenix';
-import useNewsBwe from '../../hooks/useNewsBwe';
+// import useNewsBwe from '../../hooks/useNewsBwe';
 import CoinPriceVariation from './CoinPriceVariation/coinPriceVariation';
 import HeaderOptions from './headerOptions/headerOptions';
 import { defaultImages, sourceSounds, manualAdditions, manualRemovals } from './params';
@@ -53,7 +53,7 @@ const NewsFeed = () => {
   const { data: symbols } = useSymbols();
   const { data: futSymbols } = useFutureSymbols();
   const { messages: terminalMessages } = useNewsTerminal();
-  const { messages: bweMessages } = useNewsBwe();
+  // const { messages: bweMessages } = useNewsBwe();
   const { messages: phoenixMessages } = useNewsPhoneix();
   const [mergedMessages, setMergedMessages] = useState([]);
   const [audioEnabled, setAudioEnabled] = useState(false);
@@ -129,7 +129,7 @@ const NewsFeed = () => {
 
   // Handle duplicates in feed
   useEffect(() => {
-    const allMessages = [...terminalMessages, ...bweMessages, ...phoenixMessages];
+    const allMessages = [...terminalMessages, ...phoenixMessages];
     const uniqueMessages = filterDuplicates(allMessages);
   
     uniqueMessages.sort((a, b) => new Date(b.time) - new Date(a.time));
@@ -162,7 +162,7 @@ const NewsFeed = () => {
   
       return limitedMessages;
     });
-  }, [terminalMessages, bweMessages, phoenixMessages]);
+  }, [terminalMessages, phoenixMessages]);
 
   const normalizedSourceSounds = useMemo(() => {
     return Object.keys(sourceSounds).reduce((acc, key) => {

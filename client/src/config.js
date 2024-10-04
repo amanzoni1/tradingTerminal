@@ -2,7 +2,7 @@ const config = {
   swr: { revalidateOnFocus: false },
   apiEndpoint: 'http://localhost:8000',
   wsUri: 'wss://news.treeofalpha.com/ws',
-  wsBweUri: 'ws://public.bwe-ws.com:8001',
+  wsBweUri: 'wss://public.bwe-ws.com:8001',
   wsPhoenixUrl: 'wss://wss.phoenixnews.io',
   binFutureLinkPRD: 'https://binance.com/en/futures/',
   binSpotLinkPRD: 'https://www.binance.com/en/trade/',

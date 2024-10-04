@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import useNewsTerminal from '../../hooks/useNewsTerminal';
 import useNewsPhoenix from '../../hooks/useNewsPhoenix';
-import useNewsBwe from '../../hooks/useNewsBwe';
+// import useNewsBwe from '../../hooks/useNewsBwe';
 import useSymbols from '../../hooks/useSymbols';
 import useSnackbar from '../../hooks/useSnackbar';
 // Removed the CSS import as it's not needed
@@ -52,7 +52,7 @@ const getCoinsFromMessage = (message) => {
 const TradingPair = ({ selectSymbol }) => {
   const { data: symbols } = useSymbols();
   const { messages: terminalMessages } = useNewsTerminal();
-  const { messages: bweMessages } = useNewsBwe();
+  // const { messages: bweMessages } = useNewsBwe();
   const { messages: phoenixMessages } = useNewsPhoenix();
   const { openErrorSnackbar } = useSnackbar();
 
@@ -61,11 +61,11 @@ const TradingPair = ({ selectSymbol }) => {
 
   // First useEffect: Merge and filter messages
   useEffect(() => {
-    const allMessages = [...terminalMessages, ...bweMessages, ...phoenixMessages];
+    const allMessages = [...terminalMessages, ...phoenixMessages];
     const uniqueMessages = filterDuplicates(allMessages);
     uniqueMessages.sort((a, b) => new Date(b.time) - new Date(a.time));
     setMergedMessages(uniqueMessages);
-  }, [terminalMessages, bweMessages, phoenixMessages]);
+  }, [terminalMessages, phoenixMessages]);
 
   // Second useEffect: Extract top 5 coins
   useEffect(() => {
